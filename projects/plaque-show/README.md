@@ -1,24 +1,31 @@
 # PlaqueShow
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+This library helps you to display your vehicle license plate using it. Now, it doesn't matter if this vehicle is a motorcycle or a car, just specify its type.
 
-## Code scaffolding
+## How to Use
 
-Run `ng generate component component-name --project plaque-show` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project plaque-show`.
-> Note: Don't forget to add `--project plaque-show` or else it will be added to the default project in your `angular.json` file. 
+In first step install package in your project:
+```
+    npm i plaque-show
+```
 
-## Build
+After that, add `PlaqueShowModule` in `module.ts` file, then you must make a model like below section:
 
-Run `ng build plaque-show` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+plaque: VehiclePlaqueAlphabetModel;
 
-## Publishing
+private generatePlaque(){
+  this.plaque.isCar: true;
+  this.plaque.plaque1: 12;
+  this.plaque.plaque2: 345;
+  this.plaque.plaque3: 11;
+  this.plaque.vPlaqueAlphabet: 'الف';
+}
+      
+```
 
-After building your library with `ng build plaque-show`, go to the dist folder `cd dist/plaque-show` and run `npm publish`.
+finally you must add below section in html file:
 
-## Running unit tests
-
-Run `ng test plaque-show` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+<app-plaque-show [plaqueItem]="plaque"></app-plaque-show>
+```
