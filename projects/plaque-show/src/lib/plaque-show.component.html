@@ -1,0 +1,21 @@
+<div class="input-group main-frame " [class]="isCar ? className + ' car-plaque' : 'motor-plaque'" dir="ltr">
+    <div class="col-1 plaque-color">
+
+    </div>
+
+    <div class="input-group p-0 " [class]="isCar ? 'col-2 ls-3' : ' col-8'">
+        <strong class="text-center plaque-character h33 pl-firstnum">{{plaque1}}</strong>
+    </div>
+
+    <div class="col-2 p-0 input-group " *ngIf="isCar">
+        <strong class="text-center plaque-character h33 ">{{plaqueAlphabet}}</strong>
+    </div>
+
+    <div class="input-group p-0 " [class]="isCar ? 'frame-divider col-3 ls-3' : ' col-12'">
+        <strong class="text-center plaque-character h33 ">{{plaque2}}</strong>
+    </div>
+
+    <div class="input-group text-center iran-svg col-3 p-0 " *ngIf="isCar">
+        <strong class="text-center plaque-character h33 ls-3" style="margin-top: 4px;">{{plaque3}}</strong>
+    </div>
+</div>

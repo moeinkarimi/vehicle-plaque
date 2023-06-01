@@ -12,7 +12,7 @@
         "iranian vehicle plaque",
         "iranian plaque"
     ],
-
+    "homepage": "https://github.com/moeinkarimi/vehicle-plaque",
     "peerDependencies": {
         "@angular/common": "^15.2.0",
         "@angular/core": "^15.2.0"
