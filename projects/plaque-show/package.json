@@ -1,0 +1,24 @@
+{
+    "name": "plaque-show",
+    "version": "0.0.2",
+    "description": "A simple component for show iranian vehicle plaque",
+    "author": "Moein Karimi",
+    "keywords": [
+        "angular",
+        "typescript",
+        "plaque",
+        "vehicle",
+        "پلاک خودرو",
+        "iranian vehicle plaque",
+        "iranian plaque"
+    ],
+
+    "peerDependencies": {
+        "@angular/common": "^15.2.0",
+        "@angular/core": "^15.2.0"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0"
+    },
+    "sideEffects": false
+}
