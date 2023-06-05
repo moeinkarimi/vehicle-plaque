@@ -5,7 +5,7 @@ export class VehiclePlaqueAlphabetModel {
 
   plaque3?: number;
 
-  vPlaqueAlphabet?: string;
+  plaqueAlphabet?: string;
 
   isCar?: boolean;
 }

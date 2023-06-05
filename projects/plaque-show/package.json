@@ -1,6 +1,6 @@
 {
-    "name": "plaque-show",
-    "version": "0.0.2",
+    "name": "vehicle-plaque-show",
+    "version": "0.0.5",
     "description": "A simple component for show iranian vehicle plaque",
     "author": "Moein Karimi",
     "keywords": [
@@ -10,9 +10,12 @@
         "vehicle",
         "پلاک خودرو",
         "iranian vehicle plaque",
-        "iranian plaque"
+        "iranian plaque",
+        "plate",
+        "vehicle license plate"
     ],
     "homepage": "https://github.com/moeinkarimi/vehicle-plaque",
+
     "peerDependencies": {
         "@angular/common": "^15.2.0",
         "@angular/core": "^15.2.0"

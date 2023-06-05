@@ -18,9 +18,7 @@ const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: {
   styleUrls: ['./plaque-show.component.scss'],
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR],
 })
-export class PlaqueShowComponent
-  implements OnInit
-{
+export class PlaqueShowComponent implements OnInit {
   plaque1?: number;
   plaque2?: number;
   plaque3?: number;
@@ -30,24 +28,81 @@ export class PlaqueShowComponent
 
   @Input() plaqueItem!: VehiclePlaqueAlphabetModel;
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     if (this.plaqueItem != null) {
-      this.plaque1 = this.plaqueItem.plaque1;
-      this.plaque2 = this.plaqueItem.plaque2;
-      this.plaque3 = this.plaqueItem.plaque3;
-      this.plaqueAlphabet = this.plaqueItem.vPlaqueAlphabet;
       this.isCar = this.plaqueItem.isCar;
-      this.plaqueColor(this.plaqueAlphabet!);
-      console.log(this.plaqueItem)
+
+      if (this.isCar) {
+        if (
+          this.plaqueItem.plaque1! > 10 &&
+          this.plaqueItem.plaque1! < 100 &&
+          !this.isLastDigitZero(this.plaqueItem.plaque1!)
+        ) {
+          this.plaque1 = this.plaqueItem.plaque1;
+        } else {
+          this.plaque1 = 11;
+        }
+
+        if (
+          this.plaqueItem.plaque2! > 110 &&
+          this.plaqueItem.plaque2! < 1000 &&
+          !this.isLastDigitZero(this.plaqueItem.plaque2!)
+        ) {
+          this.plaque2 = this.plaqueItem.plaque2;
+        } else {
+          this.plaque2 = 111;
+        }
+
+        if (this.plaqueItem.plaque3! > 9 && this.plaqueItem.plaque3! < 100) {
+          this.plaque3 = this.plaqueItem.plaque3;
+        } else {
+          this.plaque3 = 10;
+        }
+
+        this.plaqueAlphabet = this.plaqueItem.plaqueAlphabet;
+        this.plaqueColor(this.plaqueAlphabet!);
+      } else {
+        if (
+          this.plaqueItem.plaque1! > 110 &&
+          this.plaqueItem.plaque1! < 1000 &&
+          !this.isLastDigitZero(this.plaqueItem.plaque1!)
+        ) {
+          this.plaque1 = this.plaqueItem.plaque1;
+        } else {
+          this.plaque1 = 111;
+        }
+
+        if (
+          this.plaqueItem.plaque2! > 11110 &&
+          this.plaqueItem.plaque2! < 100000 &&
+          !this.isLastDigitZero(this.plaqueItem.plaque1!)
+        ) {
+          this.plaque2 = this.plaqueItem.plaque2;
+        } else {
+          this.plaque2 = 11111;
+        }
+      }
     }
+  }
+
+  private isLastDigitZero(value: number) {
+    var lastDigit: number = 0;
+    if (value >= 10 && value < 100) lastDigit = value % 10;
+    else if (value >= 100 && value < 1000) lastDigit = value % 100;
+    else if (value >= 1000 && value < 10000) lastDigit = value % 1000;
+    else if (value >= 10000 && value < 100000) lastDigit = value % 10000;
+
+    if (lastDigit === 0) {
+      return true;
+    }
+    return false;
   }
 
   plaqueColor(alphabet: string) {
     switch (alphabet) {
-      case "الف":
+      case 'الف':
         this.className = 'edari';
         break;
       case 'پ':
