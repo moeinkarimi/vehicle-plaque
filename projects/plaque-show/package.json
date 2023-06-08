@@ -12,10 +12,12 @@
         "iranian vehicle plaque",
         "iranian plaque",
         "plate",
-        "vehicle license plate"
+        "vehicle license plate",
+        "iranian license plate",
+        "license plate"
     ],
-    "homepage": "https://github.com/moeinkarimi/vehicle-plaque",
-
+    "homepage": "http://vehicle-plaque.divlife.ir",
+    "repository": {"url": "https://github.com/moeinkarimi/vehicle-plaque"},
     "peerDependencies": {
         "@angular/common": "^15.2.0",
         "@angular/core": "^15.2.0"
@@ -23,8 +25,5 @@
     "dependencies": {
         "tslib": "^2.3.0"
     },
-    "sideEffects": false,
-    "publishConfig": {
-      "registry": "https://npm.pkg.github.com"
-    }
+    "sideEffects": false
 }
