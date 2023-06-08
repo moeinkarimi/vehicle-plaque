@@ -2,7 +2,7 @@
 
 This library helps you to display your vehicle license plate using it. Now, it doesn`t matter if this vehicle is a motorcycle or a car, just specify its type.
 
-![License Plate](https://github.com/moeinkarimi/vehicle-plaque/blob/master/sample%20license%20plate.png?raw=true)
+!![License Plate](https://github.com/moeinkarimi/vehicle-plaque/blob/master/sample%20license%20plate.png?raw=true)
 
 ## How to Use
 
